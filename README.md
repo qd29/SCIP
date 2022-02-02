@@ -3,6 +3,9 @@
 Division of Clinical and Metabolic Genetics & The Centre for Applied Genomics <br/>
 The Hospital for Sick Children, Toronto, Canada**
 
+### How to cite SCIP?
+Publication forthcoming.
+
 ### Where are all the files required by SCIP?
 **hg19**
 - Annotation files: https://drive.google.com/file/d/1rWwkJ-eFDL1xT0DzraNi9oQ-NtC62TCe/view?usp=sharing
