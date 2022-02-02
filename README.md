@@ -80,6 +80,7 @@ perl SCIP_filt_04_hg38.pl -n MSG-4093
     - a. If the CNVs are re-analyzed in the future (e.g., using up-to-date annotation files), keeping these files allow SCIP to use them instead of querying the alignment BAM/CRAM files again. Therefore, we recommend keeping them (unless disk space is an issue).
 
 **Preparations (Visualization Module)**
+
 21.	The SCIP Visualization Module can be run on Windows or macOS computers. Create an empty directory on the computer (hereafter referred to as the working directory). 
 22.	Download the `SCIP_interface.R` (hg19) or `SCIP_interface_hg38.R` script and the `interface_config.txt` files from GitHub, place them in the working directory. 
 23.	Install `R`, `RStudio`, and R packages `shiny`, `DT` and `plotrix` (and any dependencies). 
