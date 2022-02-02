@@ -1,6 +1,19 @@
 # SCIP: Suite for CNV Interpretation and Prioritization
 
-### Step-by-step Instructions
+### Where are all the files required by SCIP?
+**hg19**
+- Annotation files: https://drive.google.com/file/d/1rWwkJ-eFDL1xT0DzraNi9oQ-NtC62TCe/view?usp=sharing
+- SCIP Filtration & Prioritization Module scripts: under `filtration_prioritization_hg19` and `pipeline_config/pipeline_config.txt`
+- Alignment for a reference sample: ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR194/ERR194147 (`NA12878_S1.bam`)
+- SCIP Visualization Module scripts: under `visualization_hg19`
+
+**hg38**
+- Annotation files: https://drive.google.com/file/d/1N4dt_UZ3CMw7CtkmU-KQDZe2tFmnt9kd/view?usp=sharing
+- SCIP Filtration & Prioritization Module scripts: under `filtration_prioritization_hg38` and `pipeline_config/pipeline_config_hg38.txt`
+- Alignment for a reference sample: ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239334 (`NA12878.final.cram`, conversion to BAM may be required)
+- SCIP Visualization Module scripts: under `visualization_hg38`
+
+### Step-by-step Instructions for Using SCIP
 
 **Preparations (Filtration & Prioritization Modules)**
 
