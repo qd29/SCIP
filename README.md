@@ -1,4 +1,4 @@
-# SCIP: a tool for efficient clinical interpretation of CNVs
+# SCIP: software for efficient clinical interpretation of CNVs
 **Suite for CNV Interpretation and Prioritization**
 
 **Cardiac Genome Clinic, Ted Rogers Centre for Heart Research<br/>
