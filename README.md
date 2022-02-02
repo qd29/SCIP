@@ -78,3 +78,23 @@ perl SCIP_filt_04_hg38.pl -n MSG-4093
     - a. The SCIP Prioritization Module generates files to be used by the Visualization Module, stored in the `./app_temp_file` directory. Priority scores are stored in the `[name].[hg19/hg38].pipeline_summary.txt` file in the `./user_data` directory.
 20.	Optional clean-up. SCIP stores SAM and depth information extracted from alignment files in the `./d1emp_server` directory. These files are no longer required after step 18 and may be removed. 
     - a. If the CNVs are re-analyzed in the future (e.g., using up-to-date annotation files), keeping these files allow SCIP to use them instead of querying the alignment BAM/CRAM files again. Therefore, we recommend keeping them (unless disk space is an issue).
+
+**Preparations (Visualization Module)**
+21.	The SCIP Visualization Module can be run on Windows or macOS computers. Create an empty directory on the computer (hereafter referred to as the working directory). 
+22.	Download the `SCIP_interface.R` (hg19) or `SCIP_interface_hg38.R` script and the `interface_config.txt` files from GitHub, place them in the working directory. 
+23.	Install `R`, `RStudio`, and R packages `shiny`, `DT` and `plotrix` (and any dependencies). 
+24.	The `./` directory of the Filtration & Prioritization Modules needs to be accessible to the computer running the Visualization Module. In our institution, this was done by mounting the computer server running the Filtration & Prioritization Modules as a network volume using the SMB protocol on the PC running the Visualization Module.
+    - a. When the network volume option is not available, the user can download all files in the `./app_temp_file` and `./user_data` directories to a local directory. Note that the relative location of `app_temp_file` and `user_data` must be maintained (i.e., they must sub-directories within the same directory).
+25.	In the `interface_config.txt` file:
+    - a. Modify the `TEMP_DIR` entry to the path of the app_temp_file.
+    - b. Modify the `ROOT_DIR` entry to the path of the working directory (see step 22).
+    - c. Modify the `USER` entry with your name/email. This is optional and is only used to track interpretations across multiple users. Otherwise, enter any string.
+
+*The above set-up steps are required only once.*
+
+**Running the SCIP Visualization Module**
+
+26.	Modify the `LIST_NAME` entry in the interface_config.txt to `[name].[hg19/hg38]` (see steps 5, 18).
+27.	Open `SCIP_interface.R` (or `SCIP_interface_hg38.R`) in `RStudio`. Click “Run App”, then at the top of the pop-up window, click “Open in Browser”. We recommend using Google Chrome.
+    - a. RStudio sometimes will produce a warning, which can be discarded unless it is a fatal error (e.g., the Visualization Module crashes).
+28.	CNVs are now ready for manual review using the SCIP Visualization Interface. 
