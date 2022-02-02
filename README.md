@@ -36,7 +36,7 @@
     - a. Two tab-separated columns. Each row is a gene. The first column is HGNC gene symbol; the second column is GO-terms-of-interest for this gene, separated by a vertical bar. For example:
     > DGKA Signaling|CalciumIon
     - b. Example file available at `./hg[19/38]_files/demo/go_terms_genes_demo.txt`.
-13.	Specify REF_BAM as the path of the whole-genome alignment file of a reference sample. 
+13.	Specify `REF_BAM` as the path of the whole-genome alignment file of a reference sample. 
     - a. `NA12878_S1.bam`: ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR194/ERR194147 (for hg19).
     - b. `NA12878.final.cram`: ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239334 (for hg38). Based on our experience, it might be necessary to convert the CRAM to BAM.
     - c. Corresponding index files (bai or crai) must also be available.
@@ -48,10 +48,33 @@
 15.	Specify `gene_interest` as the path of the file containing a list of candidate genes. This information is optional. If a user does not wish to provide this file, specify the path to an empty file.
     - a. One column, HGNC gene symbols. 
     - b. Example file available at `./hg[19/38]_files/demo/candidate_gene_list_demo.txt`.
-16.	Specify search_terms as the path of the file containing search terms to be listed in the Genes table in Section 6 of the SCIP Visualization Module.
+16.	Specify `search_terms` as the path of the file containing search terms to be listed in the Genes table in Section 6 of the SCIP Visualization Module.
     - a. Two tab-separated columns. The first column is the search term (for performing the Google search), based on your disease(s)-of-interest. The second column is abbreviation (for display in the Genes table). If abbreviation is not needed, the two columns can be identical. For example: 
     > developmental delay     DD
     - b. Example file available at `./hg[19/38]_files/demo/search_terms_demo.txt`.
 
 *The above set-up steps are required only once. Periodic updates of some annotation file (e.g., OMIM, GenCC, ClinGen) may be recommended. See Table S4 of the SCIP manuscript for details.*
 
+**Running the SCIP Variant Filtration Module**
+
+17.	Run the four SCIP_filt scripts sequentially. Denote the `[name]` specified in step 5 with the `-n` flag. See the example below.
+    - a. The script will update its progress by printing `SCIP Filtration Module script 01/02/03 processing hg19/hg38 chr[1-22,X]`. No errors are anticipated. 
+    - b. The `[name].filtered.txt` in the `./user_data` directory contains CNVs that passed the SCIP Filtration Module. It was reformatted into `[name].hg19/38. variant_list.txt` for the Prioritization Module. 
+
+```
+perl SCIP_filt_01_hg38.pl -n MSG-4093
+perl SCIP_filt_02_hg38.pl -n MSG-4093
+perl SCIP_filt_03_hg38.pl -n MSG-4093
+perl SCIP_filt_04_hg38.pl -n MSG-4093
+```
+
+**Running the SCIP Prioritization Module**
+
+18.	Run `perl SCIP_pri_01_hg19/38.pl`. Use the `-n` flag to specify `[name].[hg19/hg38]`, also always specify `-u 1`. The `-u` flag is reserved for parallelization (currently disabled). See line 11 of the script for information. 
+    - a. Note that `samtools` and `R` must be installed.
+    - b. `samtools` may occasionally report warnings, e.g., `the index file is older than the data file`, `protocol not supported`, and/or `failed to open reference` (especially for CRAM files). These warnings are likely harmless and may be ignored.
+    - c. The script will update its progress by printing each CNV analyzed and date/time. It will print whether it is generating new or reusing SAM and depth files (see step 20). No errors are anticipated except mentioned in (b) above. 
+19.	Run `perl SCIP_pri_02_hg19/38.pl`. Use the `-n` flag to specify `[name].[hg19/hg38]`.
+    - a. The SCIP Prioritization Module generates files to be used by the Visualization Module, stored in the `./app_temp_file` directory. Priority scores are stored in the `[name].[hg19/hg38].pipeline_summary.txt` file in the `./user_data` directory.
+20.	Optional clean-up. SCIP stores SAM and depth information extracted from alignment files in the `./d1emp_server` directory. These files are no longer required after step 18 and may be removed. 
+    - a. If the CNVs are re-analyzed in the future (e.g., using up-to-date annotation files), keeping these files allow SCIP to use them instead of querying the alignment BAM/CRAM files again. Therefore, we recommend keeping them (unless disk space is an issue).
