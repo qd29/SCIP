@@ -1,0 +1,4 @@
+LIST_NAME	HSC-033.hg19
+TEMP_FILE_DIR	/Volumes/ro_sbowdin/andyding/CNV_interface/freeze_20220119/app_temp_file/
+ROOT_DIR	/Users/andyding/Documents/clinical_genetics/CNV_interface
+USER	andy.ding@sickkids.ca
