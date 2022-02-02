@@ -17,7 +17,7 @@
 
 **Preparations (Filtration & Prioritization Modules)**
 
-1.	Create an empty directory on a UNIX-based operating system (e.g., CentOS), hereafter referred to as `./`, then create `./d1emp_server`, `./d1stat`, `./user_data`, and `./app_ temp_file`.
+1.	Create an empty directory on a UNIX-based operating system (e.g., CentOS), hereafter referred to as `./`, then create `./d1emp_server`, `./d1stat`, `./user_data`, and `./app_temp_file`.
 2.	Download the required annotation files at the following links, then decompress to `./` using `tar -xvzf [package name]`. 
     - https://drive.google.com/file/d/1rWwkJ-eFDL1xT0DzraNi9oQ-NtC62TCe/view?usp=sharing (hg19)
     - https://drive.google.com/file/d/1N4dt_UZ3CMw7CtkmU-KQDZe2tFmnt9kd/view?usp=sharing (hg38)
