@@ -1,4 +1,7 @@
 # SCIP: Suite for CNV Interpretation and Prioritization
+**Cardiac Genome Clinic, Ted Rogers Centre for Heart Research<br/>
+Division of Clinical and Metabolic Genetics & The Centre for Applied Genomics <br/>
+The Hospital for Sick Children, Toronto, Canada**
 
 ### Where are all the files required by SCIP?
 **hg19**
