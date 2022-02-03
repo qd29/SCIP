@@ -4,6 +4,7 @@
 **Cardiac Genome Clinic, Ted Rogers Centre for Heart Research<br/>
 Division of Clinical and Metabolic Genetics & The Centre for Applied Genomics <br/>
 The Hospital for Sick Children, Toronto, Canada**
+
 Contact: andy.ding@sickkids.ca
 
 ### How to cite SCIP?
