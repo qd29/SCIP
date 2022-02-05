@@ -76,7 +76,7 @@ Publication forthcoming.
     > developmental delay     DD
     - b. Example file available at `./hg[19/38]_files/demo/search_terms_demo.txt`.
 
-*The above set-up steps are required only once. Periodic updates of some annotation file (e.g., OMIM, GenCC, ClinGen) may be recommended. See Table S4 of the SCIP manuscript for details.*
+*The above set-up steps are required only once, except for updating the `cohort_CNV` file to include CNVs from family members of the current case). Periodic updates of some annotation file (e.g., OMIM, GenCC, ClinGen) may be recommended. See Table S4 of the SCIP manuscript for details.*
 
 **Running the SCIP Variant Filtration Module**
 
