@@ -35,7 +35,7 @@ Publication forthcoming.
 4.	Download the SCIP backend scripts from GitHub, place them at `./`. For each genome build, there are 13 scripts: 4 for the filtration module and 9 for the prioritization module.
 5.	For each sample, prepare a tab-delimited file named `[name].unfiltered_CNV.txt` that stores all CNVs. Place the file in `./user_data`.
     - a. This file contains seven columns. The first four columns are chromosome, start position, end position, and type (DEL/DUP), respectively. The fifth and sixth columns are not used by SCIP and may contain free text. The last column is sample ID. 
-    - b. To allow SCIP recognize members of the same family, we recommend naming samples using the following format: `ABC-123-001`. `ABC-123` is the family ID that is identical for all family members. The last three digits denote family relationship, with 001, 002, 003, 004+ denotes proband, mother, father and additional family members, respectively.
+    - b. To allow SCIP to recognize members of the same family, we recommend naming samples using the following format: `ABC-123-001`. `ABC-123` is the family ID that is identical for all family members. The last three digits denote family relationship, with 001, 002, 003, 004+ denoting proband, mother, father and additional family members, respectively.
     - c. For example:
     > 1 620001 635000 DUP . . SAM-001-001
 
@@ -52,11 +52,11 @@ Publication forthcoming.
 9.	Specify `ALIGNMENT_PATH` to the path containing alignment files. Each sample must have its own subdirectory. For example, alignment file for sample001 should be stored at: `ALIGNMENT_PATH/sample001/sample001.bam`. Corresponding index files (bai or crai) must also be available.
 10.	Specify `OMIM` as the path of the OMIM `genemap2.txt` file. 
 11.	Specify `expression_file` as the path of the file that contains expression level per gene in the tissue-of-interest. This information is optional. If a user does not wish to provide this file, specify the path to an empty file. 
-    - a. Two tab-separated columns. Each row is a gene. The first column is HGNC gene symbol, and the second column is expression level. For example:
+    - a. Two tab-separated columns. Each row is a gene. The first column is the HGNC gene symbol, and the second column is the expression level. For example:
     > A1BG 7.627
     - b. Example file available at `./hg[19/38]_files/demo/gene_exp_demo.txt`.
 12.	Specify `GO_terms` as the path of the file that contains GO terms information per gene. This information is optional. If a user does not wish to provide this file, specify the path to an empty file.
-    - a. Two tab-separated columns. Each row is a gene. The first column is HGNC gene symbol; the second column is GO-terms-of-interest for this gene, separated by a vertical bar. For example:
+    - a. Two tab-separated columns. Each row is a gene. The first column is the HGNC gene symbol; the second column is GO-terms-of-interest for this gene, separated by a vertical bar. For example:
     > DGKA Signaling|CalciumIon
     - b. Example file available at `./hg[19/38]_files/demo/go_terms_genes_demo.txt`.
 13.	Specify `REF_BAM` as the path of the whole-genome alignment file of a reference sample. 
@@ -76,7 +76,7 @@ Publication forthcoming.
     > developmental delay     DD
     - b. Example file available at `./hg[19/38]_files/demo/search_terms_demo.txt`.
 
-*The above set-up steps are required only once, except for updating the `cohort_CNV` file to include CNVs from family members of the current case (step 14). Periodic updates of some annotation file (e.g., OMIM, GenCC, ClinGen) may be recommended. See Table S4 of the SCIP manuscript for details.*
+*The above set-up steps are required only once, except for updating the `cohort_CNV` file to include CNVs from family members of the current case (step 14). Periodic updates of some annotation files (e.g., OMIM, GenCC, ClinGen) may be recommended. See Table S4 of the SCIP manuscript for details.*
 
 **Running the SCIP Variant Filtration Module**
 
@@ -96,7 +96,7 @@ perl SCIP_filt_04_hg38.pl -n MSG-4093
 18.	Run `perl SCIP_pri_01_hg19/38.pl`. Use the `-n` flag to specify `[name].[hg19/hg38]`, also always specify `-u 1`. The `-u` flag is reserved for parallelization (currently disabled). See line 11 of the script for information. 
     - a. Note that `samtools` and `R` must be installed.
     - b. `samtools` may occasionally report warnings, e.g., `the index file is older than the data file`, `protocol not supported`, and/or `failed to open reference` (especially for CRAM files). These warnings are likely harmless and may be ignored.
-    - c. The script will update its progress by printing each CNV analyzed and date/time. It will print whether it is generating new or reusing SAM and depth files (see step 20). No errors are anticipated except mentioned in (b) above. 
+    - c. The script will update its progress by printing each CNV analyzed and date/time. It will print whether it generates new or reuses SAM and depth files (see step 20). No errors are anticipated except mentioned in (b) above. 
 19.	Run `perl SCIP_pri_02_hg19/38.pl`. Use the `-n` flag to specify `[name].[hg19/hg38]`.
     - a. The SCIP Prioritization Module generates files to be used by the Visualization Module, stored in the `./app_temp_file` directory. Priority scores are stored in the `[name].[hg19/hg38].pipeline_summary.txt` file in the `./user_data` directory.
 20.	Optional clean-up. SCIP stores SAM and depth information extracted from alignment files in the `./d1emp_server` directory. These files are no longer required after step 18 and may be removed. 
@@ -120,5 +120,5 @@ perl SCIP_filt_04_hg38.pl -n MSG-4093
 
 26.	Modify the `LIST_NAME` entry in the interface_config.txt to `[name].[hg19/hg38]` (see steps 5, 18).
 27.	Open `SCIP_interface.R` (or `SCIP_interface_hg38.R`) in `RStudio`. Click “Run App”, then at the top of the pop-up window, click “Open in Browser”. We recommend using Google Chrome.
-    - a. RStudio sometimes will produce a warning, which can be discarded unless it is a fatal error (e.g., the Visualization Module crashes).
+    - a. RStudio sometimes produces a warning, which can be discarded unless it is a fatal error (e.g., the Visualization Module crashes).
 28.	CNVs are now ready for manual review using the SCIP Visualization Interface. 
