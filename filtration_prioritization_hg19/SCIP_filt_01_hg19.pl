@@ -119,4 +119,8 @@ close file1;
 }
 close out1;
 
+system ("perl ./SCIP_filt_02_hg19.pl -n $name");
+system ("perl ./SCIP_filt_03_hg19.pl -n $name");
+system ("perl ./SCIP_filt_04_hg19.pl -n $name");
+
 exit 2;
