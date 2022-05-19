@@ -130,4 +130,11 @@ close file1;
 }
 close out1;
 
+system ("perl ./SCIP_filt_02_hg38.pl -n $name");
+system ("perl ./SCIP_filt_03_hg38.pl -n $name");
+system ("perl ./SCIP_filt_04_hg38.pl -n $name");
+my $temp_name="$name.hg38";
+system ("perl ./SCIP_pri_01_hg38.pl -n $temp_name -u 1");
+system ("perl ./SCIP_pri_02_hg38.pl -n $temp_name");
+
 exit 2;
