@@ -14,7 +14,7 @@ BinMean <- function (vec, every, na.rm = TRUE) {
 
 config_file=read.table("./interface_config.txt",comment.char="",sep="\t",quote="")
 temp_file_dir=config_file[2,2]
-username=config_file[5,2]
+username=config_file[4,2]
 regions_list=read.table(paste(temp_file_dir,"/../user_data/",config_file[1,2],".pipeline_summary.txt",sep=""),comment.char="",sep="\t",quote="")
 
 # https://stackoverflow.com/questions/63882483
