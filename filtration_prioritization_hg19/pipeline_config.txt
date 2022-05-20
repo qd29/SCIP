@@ -6,7 +6,7 @@ gnomAD_SV	./hg19_files/gnomad_v2.1_sv.sites.vcf.gz
 gnomAD_constraints	./hg19_files/gnomad.v2.1.1.lof_metrics.by_transcript.txt.bgz
 ClinGen_dosage_region	./hg19_files/ClinGen_region_curation_list_GRCh37_20211107.tsv
 ClinGen_dosage_gene	./hg19_files/ClinGen_gene_curation_list_GRCh37_20211107.tsv
-OMIM	./hg19_files/genemap2_11072021.txt
+OMIM	./hg19_files/genemap2.txt
 GenCC	./hg19_files/gencc_09152021_tab_sep.txt
 coding_exons	./hg19_files/hg19_coding_exons_v3_name_range.txt
 coding_exons_plotting	./hg19_files/hg19_coding_exons_plotting_v2.txt
