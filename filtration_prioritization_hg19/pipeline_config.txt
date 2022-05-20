@@ -1,5 +1,5 @@
 SAMPLE_ID	./hg19_files/demo/sample_id.txt
-CURRENT_PATH	/hpf/projects/sbowdin/andyding/CNV_interface/freeze_20220119
+CURRENT_PATH	.
 ALIGNMENT_PATH	./alignment	
 PREFIX	NA
 gnomAD_SV	./hg19_files/gnomad_v2.1_sv.sites.vcf.gz
