@@ -1,14 +1,20 @@
 # SCIP: software for efficient clinical interpretation of CNVs
 **Suite for CNV Interpretation and Prioritization**
 
-**Cardiac Genome Clinic, Ted Rogers Centre for Heart Research<br/>
-Division of Clinical and Metabolic Genetics & The Centre for Applied Genomics <br/>
+**Cardiac Genome Clinic, Ted Rogers Centre for Heart Research<br>
+Division of Clinical and Metabolic Genetics & The Centre for Applied Genomics<br>
 The Hospital for Sick Children, Toronto, Canada**
 
 Contact: andy.ding@sickkids.ca
 
 ### How to cite SCIP?
 Publication forthcoming.
+
+### How to use SCIP?
+Tutorial videos for setting up and using SCIP:<br>
+<a href='https://www.youtube.com/watch?v=euD-TETqIas' target='_blank'>SCIP Tutorial Video #1: the Backend (Filtration and Prioritization Modules)</a><br>
+<a href='https://www.youtube.com/watch?v=FBKKrtifnfY' target='_blank'>SCIP Tutorial Video #2: the Frontend (Visualization Interface)</a><br>
+<a href='https://www.youtube.com/watch?v=YAmbV1qCzv0' target='_blank'>SCIP Tutorial Video #3: Interpreting a CNV using SCIP</a><br>
 
 ### Where are all the files required by SCIP?
 **hg19**
