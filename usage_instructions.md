@@ -1,7 +1,7 @@
 # SCIP Usage Instructions
 **This corresponds to Supplementary Text 1 of the SCIP paper.**
 
-**When using SCIP for the first time, please follow the <a href='https://github.com/qd29/SCIP/blob/main/setup_instructions.md'>SCIP Setup Instructions</a> for initial setup steps.** This instruction assumes that all setup steps have been successfully completed. We use `./` to denote the directory created for SCIP in the SCIP Setup Instructions.
+**When using SCIP for the first time, please follow the <a href='https://github.com/qd29/SCIP/blob/main/setup_instructions.md'>SCIP Setup Instructions</a> for initial setup steps.** This instruction assumes that all setup steps have been successfully completed. We use `./` to denote the directory created for SCIP in the <a href='https://github.com/qd29/SCIP/blob/main/setup_instructions.md'>SCIP Setup Instructions</a>.
 
 Prerequisites:
 
