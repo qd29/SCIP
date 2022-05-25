@@ -3,10 +3,8 @@
 
 **When using SCIP for the first time, please follow the <a href='https://github.com/qd29/SCIP/blob/main/setup_instructions.md'>SCIP Setup Instructions</a> for initial setup steps.** This instruction assumes that all setup steps have been successfully completed. We use `./` to denote the directory created for SCIP in the <a href='https://github.com/qd29/SCIP/blob/main/setup_instructions.md'>SCIP Setup Instructions</a>.
 
-**Prerequisites:**
-
-**Filtration & Prioritization Modules:** (a) A UNIX-based operating system (tested with CentOS 7). (b) The following software in the `$PATH` environment variable (version tested in parenthesis): `Perl` (v5.16), `R` (v3.5.1), `samtools` (v1.10), `bedtools` (v2.26), and `tabix` (v0.2.5).
-
+**Prerequisites:**<br>
+**Filtration & Prioritization Modules:** (a) A UNIX-based operating system (tested with CentOS 7). (b) The following software in the `$PATH` environment variable (version tested in parenthesis): `Perl` (v5.16), `R` (v3.5.1), `samtools` (v1.10), `bedtools` (v2.26), and `tabix` (v0.2.5).<br>
 **Visualization Module:** Any operation system supported by RStudio and has a web browser (tested with Windows 10 and macOS Big Sur).
 
 
