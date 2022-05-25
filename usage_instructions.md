@@ -30,7 +30,7 @@
     - **a.** Optional information. If a user does not wish to provide this file, specify the path to an empty file. 
 
     - **b.** Six tab-separated columns. Each row is a CNV. The first four columns are chromosome, start position, end position, and type (DEL/DUP), respectively. The fifth column is sample ID, and the last column is the algorithm used to identify this variant. For example:<br>
-    >1 10001 50001 DUP SAM-001-001 ERDS
+      >1 10001 50001 DUP SAM-001-001 ERDS
 
 ### Run the SCIP Variant Filtration & Prioritization Modules
 4. Run the following command. Denote the `[name]` specified in step 1 with the -n flag. For example (change hg19 to hg38 as appropriate): `perl SCIP_backend_hg19.pl -n SAM-001-001`
