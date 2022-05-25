@@ -39,6 +39,7 @@ Prerequisites:
 ### Use the SCIP Visualization Module
 6. Modify the `LIST_NAME` entry in the `interface_config.txt` to `[name].[hg19/hg38]` (see step 1).
 7. Open `SCIP_interface.R` (or `SCIP_interface_hg38.R`) in RStudio. Click “Run App”, then at the top of the pop-up window, click “Open in Browser”. We recommend using Google Chrome.
+
     - **a.** RStudio sometimes produces a warning, which can be discarded unless it is a fatal error (e.g., the Visualization Module crashes).
 
 **CNVs are now ready for manual review using the SCIP Visualization Interface.**
