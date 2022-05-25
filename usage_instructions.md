@@ -33,7 +33,7 @@
       >1 10001 50001 DUP SAM-001-001 ERDS
 
 ### Run the SCIP Variant Filtration & Prioritization Modules
-4. Run the following command. Denote the `[name]` specified in step 1 with the -n flag. For example (change hg19 to hg38 as appropriate): `perl SCIP_backend_hg19.pl -n SAM-001-001`
+4. Run the following command. Denote the `[name]` specified in step 1 with the -n flag. For example (for the script name, change `hg19` to `hg38` as appropriate): `perl SCIP_backend_hg19.pl -n SAM-001-001`
 
     - **a.** Expected outputs on screen. Filtration Module: the following information will be printed on screen - `SCIP Filtration Module script 01/02/03 processing hg19/hg38 chr[1-22,X]`. Prioritization Module: the current date/time, name of the CNV being analyzed, and whether it generates new / reuses SAM and depth files will be printed. 
 
