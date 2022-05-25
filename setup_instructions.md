@@ -44,7 +44,7 @@
 
     >ALIGNMENT_PATH/sample001/sample001.bam
 
-Corresponding index files (`bai` or `crai`) must also be available.
+    Corresponding index files (`bai` or `crai`) must also be available.
 
 5. Specify `REF_BAM` as the path to the whole-genome alignment file of a reference sample.
 
