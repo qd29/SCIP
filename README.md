@@ -12,9 +12,9 @@ Publication forthcoming.
 
 ### How to use SCIP?
 Tutorial videos for setting up and using SCIP:<br>
-<a href='https://www.youtube.com/watch?v=euD-TETqIas' target='_blank'>SCIP Tutorial Video #1: the Backend (Filtration and Prioritization Modules)</a><br>
-<a href='https://www.youtube.com/watch?v=FBKKrtifnfY' target='_blank'>SCIP Tutorial Video #2: the Frontend (Visualization Interface)</a><br>
-<a href='https://www.youtube.com/watch?v=YAmbV1qCzv0' target='_blank'>SCIP Tutorial Video #3: Interpreting a CNV using SCIP</a><br>
+<a href='https://www.youtube.com/watch?v=euD-TETqIas'>SCIP Tutorial Video #1: the Backend (Filtration and Prioritization Modules)</a><br>
+<a href='https://www.youtube.com/watch?v=FBKKrtifnfY'>SCIP Tutorial Video #2: the Frontend (Visualization Interface)</a><br>
+<a href='https://www.youtube.com/watch?v=YAmbV1qCzv0'>SCIP Tutorial Video #3: Interpreting a CNV using SCIP</a><br>
 
 ### Where are all the files required by SCIP?
 **hg19**
