@@ -15,7 +15,7 @@ An example for the SCIP Visualization Interface is available <a href='https://gi
 
 ### Instructions
 <a href='https://github.com/qd29/SCIP/blob/main/setup_instructions.md'>Initial setup instructions</a><br>
-<a href='https://github.com/qd29/SCIP/blob/main/usage_instructions.md'>Instructions for running the SCIP modules</a>
+<a href='https://github.com/qd29/SCIP/blob/main/usage_instructions.md'>Instructions for running the SCIP modules</a><br>
 <a href='https://github.com/qd29/SCIP/blob/main/update_instructions.md'>Instructions to Update SCIP Annotation Files</a>
 
 Tutorial videos for setting up and using SCIP:<br>
