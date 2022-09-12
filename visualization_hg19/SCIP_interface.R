@@ -1075,7 +1075,7 @@ server=function(input,output){
             
       text(ranges$x[1],3.4,"ClinGen Triplosensitivity Map",pos=4)
       text(ranges$x[1],2.9,"ClinGen Haploinsufficiency Map",pos=4)
-      text(ranges$x[1],2.4,"gnomAD HI Prediction",pos=4)
+      text(ranges$x[1],2.4,"gnomAD HI Constraint",pos=4)
       text(ranges$x[1],1.9,"Genes",pos=4)
       text(ranges$x[1],0.9,"pext",pos=4)
       legend("topright",legend=c("Sufficient","Emerging","Little","Recessive/Unlikely","pLI 0.9+ / LOEUF 0.35-","pLI 0.5+","pLI 0.1+"),
