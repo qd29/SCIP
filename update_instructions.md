@@ -1,4 +1,4 @@
-# Instructions to Update SCIP Annotation Files
+# Instructions for Updating SCIP Annotation Files
 
 The following annotation files used by the SCIP Prioritization Module (Table S3 of the SCIP manuscript) need to be updated regularly.
 
