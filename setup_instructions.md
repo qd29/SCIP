@@ -55,7 +55,7 @@
 
 **Setup of the SCIP Filtration & Prioritization Modules is now complete.** These steps are required only once. To run the Filtration & Prioritization Modules, go to step 1 of the <a href='https://github.com/qd29/SCIP/blob/main/usage_instructions.md'>SCIP Usage Instructions</a>. 
 
-**Advanced Users:** (1) Consider periodically update the annotation files (e.g., OMIM, GenCC, ClinGen). (2) The `expression_file`, `GO_terms`, `gene_interest`, and `search_terms` entries in the configuration file can be customized by the user. See Table S4 of the SCIP paper for formatting details. 
+**Advanced Users:** (1) Consider periodically update the annotation files (e.g., OMIM, GenCC, ClinGen). (2) The `expression_file`, `GO_terms`, `gene_interest`, and `search_terms` entries in the configuration file can be customized by the user. See Table S3 of the SCIP paper for formatting details. 
 
 ### Visualization Module
 
